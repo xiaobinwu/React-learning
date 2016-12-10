@@ -1,0 +1,56 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.lbd-image-container {
+    &-mask {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #000;
+        height: 100%;
+        z-index: 990;
+    }
+    &-wrap {
+        position: fixed;
+        overflow: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        outline: 0;
+    }
+    &-image {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%,-50%,0);
+    }
+    &-control {
+        width: 100%;
+        position: fixed;
+        bottom: 30px;
+        left: 0;
+        line-height: 30px;
+        color: #fff;
+        z-index: 1001;
+        text-align: center;
+    }
+    &-close {
+        display: inline-block;
+        width: 72px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+        background: rgba(128,128,128,.4);
+        box-shadow: 0 0 1px rgba(0,0,0,.3) inset;
+        border-radius: 2px;
+        user-select: none;
+    }
+}

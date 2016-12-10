@@ -1,0 +1,16 @@
+@import "../../../site/lbd/global/variables";
+
+[contentEditable=true]:empty:not(:focus):before{
+    content:attr(data-ph);
+    color: $font-gray-light;
+}
+
+[contentEditable=true] {
+    user-select: auto;
+    min-height: 60px;
+    background-color: #fff;
+    font-size: 14px;
+    color: $font-gray-dark;
+    white-space: pre-wrap;
+    word-break: break-all;
+}

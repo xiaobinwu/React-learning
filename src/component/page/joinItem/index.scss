@@ -1,0 +1,60 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.lbd-join-item {
+    padding: 0.35rem 0 0 0.26rem;
+    display: flex;
+    &-left {
+        margin-right: 0.2rem;
+    }
+    &-right {
+        flex:1;
+        padding: 0 0.26rem 0.35rem 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include drawBorder('after', 'bottom', $border-light);
+    }
+    &-main {
+        flex: 1;
+    }
+    &-aside {
+        color: $font-gray-light;
+        font-size: 12px;
+    }
+    &-header {
+        margin-bottom: 0.1rem;
+        font-size: 14px;
+        display: table;
+        width: 100%;
+    }
+    &-info {
+        display: table-cell;
+        vertical-align: top;
+    }
+    &-name {
+        color: $font-gray-dark;
+    }
+    &-nickname {
+        color: $font-gray-light;
+        margin-left: 5px;
+    }
+    &-body {
+        color: $font-gray-normal;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    &-content {
+        display: inline-block;
+    }
+    &-button {
+        button:first-child {
+            margin-right: 10px;
+        }
+    }
+    &-aside {
+        margin-left: 15px;
+    }
+
+}

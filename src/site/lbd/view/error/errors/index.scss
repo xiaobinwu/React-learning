@@ -1,0 +1,23 @@
+@import '../../../global/base';
+
+.index-error {
+    background: #fff;
+    text-align: center;
+}
+
+.errorMegTitle {
+    color: $font-gray-dark;
+    font-size: 20px;
+    padding-top: 5rem;
+}
+
+.errorMeg {
+    color: $font-gray-light;
+    padding: 0.5rem 0 2rem 0;
+}
+
+@media all and (max-height: 480px) and (orientation: landscape) {
+    .errorMegTitle {
+        padding-top: 1rem;
+    }
+}

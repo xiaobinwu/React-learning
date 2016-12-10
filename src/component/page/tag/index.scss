@@ -1,0 +1,49 @@
+@import "../../../site/lbd/global/variables";
+.lbd-tag{
+	display: inline-block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	&-a2a-job{
+		background-image: url("../../../site/lbd/static/job/is-A2A-job.png");
+		width: .8rem;
+		height: .29rem;
+	}
+	&-pm-job{
+		background-image: url("../../../site/lbd/static/job/is-pm-job.png");
+		width: .8rem;
+		height: .29rem;
+	}
+	&-hr{
+		background-image: url("../../../site/lbd/static/job/is-hr.png");
+		width: .52rem;
+		height: .26rem;
+	}
+	&-pm{
+		background-image: url("../../../site/lbd/static/job/is-pm.png");
+		width: .52rem;
+		height: .26rem;
+	}
+    &-private{
+        background-image: url("../../../site/lbd/static/job/tag-private.png");
+        width: 18px;
+        height: 18px;
+    }
+	&-custom{
+		//自定义title标签
+		background: #fff;
+		color: $global-green;
+		font-size: 12px;
+		border: 1px solid $global-green;
+		border-radius: .22rem;
+		width: 1.22rem;
+		height: .44rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&.active{
+			background: $global-green;
+			color: #fff;
+		}
+	}
+}

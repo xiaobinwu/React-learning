@@ -1,0 +1,29 @@
+@import "../../../site/lbd/global/variables";
+
+.lbd-hot-search {
+    padding: 0 0.26rem;
+    &-title {
+        font-size: 14px;
+        font-weight: normal;
+        padding: 0.4rem 0 0.32rem 0;
+        margin: 0;
+        color: $font-gray-normal;
+    }
+    &-tag {
+        display: inline-block;
+        padding: 0 15px;
+        height: 25px;
+        font-size: 14px;
+        border: 1px solid $border-light;
+        color: $font-gray-normal;
+        border-radius: 25px;
+        text-align: center;
+        line-height: 25px;
+        margin-right: 0.2rem;
+        margin-bottom: 0.3rem;
+        &:active {
+            color: $global-green;
+            border: 1px solid $global-green;
+        }
+    }
+}

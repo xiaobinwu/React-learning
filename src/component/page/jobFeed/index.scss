@@ -1,0 +1,8 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.lbd-feed-list-wrap {
+    .lbd-feed-item:first-child {
+        padding-top: 0;
+    }
+}

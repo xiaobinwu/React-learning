@@ -1,0 +1,33 @@
+@import "../../../site/lbd/global/variables";
+
+.lbd-user-self {
+    position: relative;
+    height: 3.1rem;
+    background-image: url('//hstatic.hirede.com/lbd/mobile/images/common/me-background.png');
+    background-size: cover;
+    background-repeat: none;
+    background-color: $border-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-setting {
+        display: inline-block;
+        position: absolute;
+        right: 0.2rem;
+        top: 0;
+        padding: 0.2rem;
+    }
+    &-profile {
+        text-align: center;
+    }
+    &-name {
+        color: #fff;
+        padding-top: 0.25rem;
+    }
+    &-avatar {
+        border: 0.05rem solid rgb(255, 255, 255); //兼容部分直接忽略border颜色为rgba的浏览器
+        border: 0.05rem solid rgba(255,255,255,0.45);
+        background-clip: padding-box; //保证border为solid的时，保留透明
+        box-sizing: content-box;
+    }
+}

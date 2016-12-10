@@ -1,0 +1,43 @@
+@import "../../../site/lbd/global/variables";
+.badge {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    &-count {
+        position: absolute;
+        transform: translateX(-50%);
+        top: -6px;
+        height: 14px;
+        border-radius: 7px;
+        min-width: 14px;
+        background: $global-orange;
+        border: 1px solid transparent;
+        color: #fff;
+        line-height: 12px;
+        text-align: center;
+        font-size: 12px;
+        white-space: nowrap;
+        transform-origin: -8% center;
+        z-index: 10;
+        box-shadow: 0 0 0 1px #fff;
+    }
+    &-dot {
+        position: absolute;
+        transform: translateX(-50%);
+        transform-origin: 0px center;
+        top: -3px;
+        height: 6px;
+        width: 6px;
+        border-radius: 100%;
+        background: red;
+        z-index: 10;
+        box-shadow: 0 0 0 1px #f9f9f9;
+    }
+    &-not-a-wrapper &-count {
+        top: auto;
+        display: block;
+        position: relative;
+        transform: translateX(0);
+    }
+}

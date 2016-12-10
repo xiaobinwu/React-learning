@@ -1,0 +1,14 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.lbd-image-gallary {
+    &-item {
+        display: inline-block;
+        width: 1.2rem;
+        height: 1.2rem;
+        text-align: center;
+        line-height: 1.2rem;
+        margin-right: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+}

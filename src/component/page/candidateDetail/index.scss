@@ -1,0 +1,143 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.lbd-candidate-detail {
+    overflow: hidden;
+    &-card {
+        background: #fff;
+        margin-bottom: 10px;
+        position: relative;
+        @include drawBorder('after', 'bottom', $border-dark);
+        @include drawBorder('before', 'top', $border-dark);
+        &:first-child:before {
+            content: none
+        }
+    }
+    &-content {
+        padding: 0.35rem 0.26rem 0.25rem 0.26rem;
+    }
+    &-content-full {
+        padding: 0.35rem 0 0.25rem 0;
+    }
+    &-title {
+        font-size: 14px;
+        color: $font-gray-dark;
+        padding-bottom: 10px;
+    }
+    &-attachment {
+        display: flex;
+        align-items: center;
+        float: right;
+    }
+    &-attach-text {
+        font-size: 12px;
+        color: $font-gray-normal;
+        padding: 0 3px;
+    }
+    &-arrow {
+        transform: rotate(180deg);
+        transition: transform 0.5s;
+    }
+    &-rotate {
+        transform: rotate(0)
+    }
+    &-attach-list {
+        word-break: break-all;
+        position: relative;
+        max-height: 0;
+        margin-bottom: 10px;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        a {
+            color: $font-gray-normal;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            border-top: 1px dotted #d3d3d3;
+            -webkit-transform: scaleY(.5);
+            transform: scaleY(.5);
+        }
+    }
+    &-expand {
+        max-height: 200px;
+        transition: max-height 0.5s;
+    }
+    &-attach-item {
+        line-height: 25px;
+        &:last-child {
+            padding-bottom: 10px;
+        }
+    }
+    &-padding {
+        padding-left: 0.26rem;
+    }
+    &-gray {
+        color: $font-gray-light;
+    }
+    &-para {
+        font-size: 13px;
+        line-height: 22px;
+        word-break: break-word;
+        color: $font-gray-normal;
+    }
+    &-records {
+        background: #fff;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    &-item {
+        padding: 10px 0;
+        width: 100%;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 1.12rem;
+            width: 100%;
+            height: 1px;
+            border-top: 1px solid $border-light;
+            transform: scaleY(0.5)
+        }
+        &:last-child:after {
+            content: none
+        }
+    }
+    &-avatar {
+        display: inline-block;
+        padding: 0 0.26rem;
+    }
+    &-name{
+        display: inline-block;
+        font-size: 14px;
+        color: $font-gray-normal;
+        width: 50%;
+        vertical-align: middle;
+        & span:last-child {
+            padding-left: 5px;
+        }
+    }
+    &-condition {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        color: $font-gray-normal;
+        margin-right: 0.26rem;
+        width: 25%;
+        text-align: right;
+    }
+    &-footer {
+        padding: 0 0.26rem;
+        a {
+            width: 100%;
+        }
+    }
+}
+

@@ -1,0 +1,20 @@
+@import '../../../global/base';
+
+.content {
+    background-color: $bg-gray;
+    margin: 84px 0 49px 0;
+}
+
+.condition-filter {
+    height: 40px;
+    position: fixed;
+    top: 44px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 #dcdcdc;
+    width: 100%;
+    padding: 0 0.26rem;
+    z-index: 1099;
+    display: flex;
+    justify-content: space-around;
+}

@@ -1,0 +1,72 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.lbd-at-user-box {
+    &-wrap {
+        position: fixed;
+        overflow: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1002;
+        outline: 0;
+        background: $bg-gray;
+    }
+    &-content {
+        padding-top: 44px;
+        height: 100%;
+    }
+    &-searchBar {
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        z-index: 1003;
+        border-bottom: 1px solid $border-dark;
+    }
+    &-search {
+        width: 100%;
+        padding: 15px 20px;
+        outline: 0;
+        border: 0;
+        font-size: 14px;
+    }
+    &-list {
+        background: #fff;
+        width: 100%;
+        padding-top: 47px;
+        max-height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        ul {
+            padding-top: 10px;
+        }
+    }
+    &-item {
+        padding: 10px 0.26rem;
+        width: 100%;
+        position: relative;
+        @include drawBorder('after', 'bottom', $border-light)
+    }
+    &-left {
+        display: inline-block;
+        padding-right: 0.26rem;
+    }
+    &-right{
+        display: inline-block;
+        font-size: 14px;
+        color: $font-gray-dark;
+        & span:last-child {
+            padding-left: 5px;
+            font-size: 12px;
+        }
+    }
+    &-empty {
+        text-align: center;
+        padding: 40px 0;
+        color: $font-gray-light;
+        font-size: 14px;
+    }
+}
+

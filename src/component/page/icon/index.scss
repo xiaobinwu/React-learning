@@ -1,0 +1,122 @@
+.lbd-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    vertical-align: middle;
+
+    &-lg {
+        width: 25px;
+        height: 25px;
+    }
+    &-md {
+        width: 0.4rem;
+        height: 0.4rem;
+    }
+    &-sm {
+        width: 0.36rem;
+        height: 0.36rem;
+    }
+
+    &-jobs {
+        background-image: url("../../../site/lbd/static/job/jobs-normal.png");
+    }
+    &-jobs-active {
+        background-image: url("../../../site/lbd/static/job/jobs-active.png");
+    }
+    &-candidates {
+        background-image: url("../../../site/lbd/static/job/candidate-normal.png");
+    }
+    &-candidates-active {
+        background-image: url("../../../site/lbd/static/job/candidate-active.png");
+    }
+    &-messages {
+        background-image: url("../../../site/lbd/static/job/message-normal.png");
+    }
+    &-messages-active {
+        background-image: url("../../../site/lbd/static/job/message-active.png");
+    }
+    &-me {
+        background-image: url("../../../site/lbd/static/job/me-normal.png");
+    }
+    &-me-active {
+        background-image: url("../../../site/lbd/static/job/me-active.png");
+    }
+    &-building {
+        background-image: url("../../../site/lbd/static/job/icon-building.png");
+    }
+    &-position {
+        background-image: url("../../../site/lbd/static/job/icon-position.png");
+    }
+    &-hat {
+        background-image: url("../../../site/lbd/static/job/icon-hat.png")
+    }
+    &-message {
+        background-image: url("../../../site/lbd/static/job/icon-message.png")
+    }
+    &-file {
+        background-image: url("../../../site/lbd/static/job/icon-file.png")
+    }
+    &-left-arrow {
+        background-image: url("../../../site/lbd/static/job/icon-left-arrow.png")
+    }
+    &-down-arrow {
+        background-image: url("../../../site/lbd/static/job/icon-down-arrow.png")
+    }
+    &-mail{
+        background-image: url("../../../site/lbd/static/job/icon-mail.png")
+    }
+    &-phone{
+        background-image: url("../../../site/lbd/static/job/icon-phone.png")
+    }
+    &-up-arrow {
+        background-image: url("../../../site/lbd/static/job/icon-up-arrow.png")
+    }
+    &-attachment {
+        background-image: url("../../../site/lbd/static/job/icon-attachment.png")
+    }
+    &-alarm {
+        background-image: url("../../../site/lbd/static/job/icon-alarm.png")
+    }
+    &-back {
+        background-image: url("../../../site/lbd/static/job/icon-back.png")
+    }
+    &-setting {
+        background-image: url("../../../site/lbd/static/job/icon-setting.png")
+    }
+    &-alert {
+        background-image: url("../../../site/lbd/static/job/icon-alert.png")
+    }
+    &-success {
+        background-image: url("../../../site/lbd/static/job/icon-success.png")
+    }
+    &-loading {
+        background-image: url("../../../site/lbd/static/job/icon-loading.gif")
+    }
+    &-write {
+        background-image: url("../../../site/lbd/static/job/icon-write.png")
+    }
+    &-open {
+        background-image: url("../../../site/lbd/static/job/icon-open.png")
+    }
+    &-open-active {
+        background-image: url("../../../site/lbd/static/job/icon-open-active.png")
+    }
+    &-close {
+        background-image: url("../../../site/lbd/static/job/icon-close.png")
+    }
+    &-close-active {
+        background-image: url("../../../site/lbd/static/job/icon-close-active.png")
+    }
+    &-at {
+        background-image: url("../../../site/lbd/static/job/icon-at.png")
+    }
+    &-at-active {
+        background-image: url("../../../site/lbd/static/job/icon-at-active.png")
+    }
+    &-search {
+        background-image: url("../../../site/lbd/static/job/icon-search.png")
+    }
+}
+
+

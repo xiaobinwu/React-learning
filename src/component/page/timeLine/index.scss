@@ -1,0 +1,82 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.lbd-timeline {
+    &-item {
+        display: flex;
+        background: #fff;
+    }
+    &-left {
+        padding: 0.35rem 0.4rem 0 0.26rem;
+        border-right: 1px solid $border-light;
+        position: relative;
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 0.2rem;
+            height: 0.2rem;
+            border-radius: 50%;
+            background-color: #eee;
+            position: absolute;
+            right: -0.1rem;
+            top: 0.55rem;
+        }
+    }
+    &-right {
+        flex: 1;
+        padding: 0.45rem 0.26rem 0.35rem 0;
+        margin-left: 0.2rem;
+        position: relative;
+        @include drawBorder('after', 'bottom', $border-light);
+    }
+    &-header {
+        margin-bottom: 0.1rem;
+        font-size: 14px;
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+    &-info {
+        display: table-cell;
+        vertical-align: top;
+        width: 70%;
+    }
+    &-name {
+        color: $font-gray-dark;
+    }
+    &-nickname {
+        color: $font-gray-light;
+        margin-left: 5px;
+    }
+    &-body {
+        color: $font-gray-normal;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    &-extra {
+        font-size: 12px;
+        padding-top: 5px;
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+    &-money {
+        display: inline-block;
+        line-height: 1;
+        padding: 4px;
+        text-align: center;
+        color: #fff;
+        background-color: $global-orange;
+        border-radius: 2px;
+        margin-right: 6px;
+        font-size: 12px;
+    }
+    &-time {
+        display: table-cell;
+        text-align: right;
+        color: $font-gray-light;
+        font-size: 12px;
+    }
+    &-green {
+        color: $global-green;
+    }
+}

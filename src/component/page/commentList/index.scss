@@ -1,0 +1,26 @@
+@import "../../../site/lbd/global/variables";
+
+.lbd-comment-wrap {
+    padding-bottom: 52px;
+}
+
+.lbd-comment-list {
+    background: #fff;
+}
+
+.lbd-write-comment {
+    font-size: 20px;
+    color: $global-green;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span:first-child {
+        margin-right: 5px;
+    }
+    &:active {
+        background: $global-white-touch;
+    }
+}
+
+

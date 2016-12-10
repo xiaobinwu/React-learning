@@ -1,0 +1,164 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.lbd-filter {
+    &-mainJobFilter {
+        background-color: #fff;
+        height: 44px;
+        text-align: center;
+        position: relative;
+        width: 100%;
+        @include drawBorder('after', 'bottom', $border-dark);
+        .lbd-filter-wrap {
+            display: inline-block;
+            margin-top: 6px;
+            border-radius: 4px;
+            border: 1px solid $global-green;
+            .lbd-filter-item {
+                color: $global-green;
+                display: inline-block;
+                width: 2.04rem;
+                height: 30px;
+                line-height: 30px;
+                font-size: 14px;
+                &:nth-child(3), &:nth-child(2) {
+                    border-left: 1px solid $global-green;
+                }
+                &-active {
+                    background-color: $global-green;
+                    color: #fff;
+                }
+            }
+        }
+        &.is-head {
+            background-color: $global-green;
+            border: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1099;
+            &:after {
+                content: none
+            }
+            .lbd-filter-wrap {
+                border: 1px solid #fff;
+                .lbd-filter-item {
+                    color: #fff;
+                    &:nth-child(3), &:nth-child(2) {
+                        border-left: 1px solid #fff;
+                    }
+                    &-active {
+                        background-color: #fff;
+                        color: $global-green;
+                    }
+                }
+            }
+        }
+        &.has-single-item {
+            .lbd-filter-wrap {
+                border: none;
+                .lbd-filter-item {
+                    background-color: transparent;
+                    color: #fff;
+                    font-size:18px;
+                    font-weight: 600;
+                }
+            }
+        }
+        &.is-hiden {
+            display: none;
+        }
+    }
+    &-mainConditionFilter {
+        background-color: #fff;
+        height: 40px;
+        box-shadow: 0px 2px 5px 0px #dcdcdc;
+        width: 100%;
+        .lbd-filter-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 100%;
+            width: 100%;
+            .lbd-filter-item {
+                color: $font-gray-normal;
+                font-size: 14px;
+                flex-grow: 1;
+                text-align: center;
+                margin: 0 20px;
+                height: 40px;
+                line-height: 40px;
+                &-active {
+                    color: $global-green;
+                    font-size: 16px;
+                    border-bottom: 3px solid $global-green;
+                }
+                &.lbd-filter-item-single {
+                    flex-grow: 0;
+                }
+            }
+        }
+        &.is-slidable {
+            display: block;
+            height: 40px;
+            position: relative;
+            .lbd-filter-mask {
+                background: linear-gradient(to right, rgba(255,255,255,0), #f8f8f8);
+                height: 40px;
+                position: absolute;
+                pointer-events: none;
+                right: 0;
+                top: 0;
+                width: 44px;
+                z-index: 2;
+            }
+            .lbd-filter-wrap {
+                display: inline-block;
+                white-space: nowrap;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                overflow-scrolling: touch;
+                user-select: none;
+                .lbd-filter-item {
+                    display: inline-block;
+                    margin: 0;
+                    padding: 0px 10px;
+                    text-align: center;
+                    &:last-child {
+                        margin-right: 40px;
+                    }
+                }
+            }
+        }
+    }
+    &-button {
+        background-color: #fff;
+        position: relative;
+        width: 100%;
+        .lbd-filter-wrap {
+            padding: 0.35rem 0.26rem;
+        }
+        .lbd-filter-item {
+            display: inline-block;
+            width: 60px;
+            padding: 0 15px;
+            height: 22px;
+            border: 1px solid #d3d3d3;
+            color: #666;
+            font-size: 12px;
+            border-radius: 22px;
+            text-align: center;
+            line-height: 20px;
+            margin-right: 10px;
+            &-active {
+                background-color: $global-green;
+                border: 1px solid $global-green;
+                color: #fff;
+            }
+        }
+    }
+}
+
+#lbd-filter-scroll-el::-webkit-scrollbar {
+    display: none;
+}

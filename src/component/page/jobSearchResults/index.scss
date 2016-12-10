@@ -1,0 +1,22 @@
+@import "../../../site/lbd/global/variables";
+
+.lbd-job-search {
+    height: 100%;
+    background: #f2f2f2;
+    &-filter {
+        height: 40px;
+        position: fixed;
+        top: 44px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 5px 0 #dcdcdc;
+        width: 100%;
+        padding: 0 0.26rem;
+        z-index: 1099;
+        display: flex;
+        justify-content: space-around;
+    }
+    &-list {
+        margin-top: 84px;
+    }
+}

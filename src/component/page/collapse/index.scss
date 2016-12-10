@@ -1,0 +1,27 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.lbd-collapse {
+    &-wrap {
+        display: inline-block;
+        overflow-y: hidden;
+    }
+    &-icon {
+        text-align: center;
+        height: 28px;
+        line-height: 28px;
+        position: relative;
+        color: $font-gray-light;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            border-top: 1px dotted $border-dark;
+            transform: scaleY(0.5);
+
+        }
+    }
+}

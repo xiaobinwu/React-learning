@@ -1,0 +1,64 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.lbd-job-item {
+    padding: 0.35rem 0.26rem 0 0.26rem;
+    &-header {
+        margin-bottom: 0.22rem;
+    }
+    &-name {
+        font-size: 16px;
+        font-weight: 500;
+        color: $font-gray-dark;
+        margin-right: 0.2rem;
+        max-width: 15em;
+    }
+    &-info {
+        font-size: 14px;
+        color: $font-gray-normal;
+        span:nth-child(3) {
+            margin-left: 20px;
+        }
+    }
+    &-firm {
+        max-width: 6em;
+    }
+    &-loc {
+        max-width: 6em;
+    }
+    &-subinfo {
+        font-size: 12px;
+        margin: 0.15rem 0;
+        color: $font-gray-light;
+        span:nth-child(3), span:nth-child(5) {
+            margin-left: 10px;
+        }
+    }
+    &-footer {
+        position: relative;
+        padding: 5px 0;
+        font-size: 12px;
+        color: $font-gray-light;
+        @include drawBorder('before', 'top', $border-light)
+    }
+    &-num {
+        display: inline-block;
+        margin-right: 10px;
+        span:first-child {
+            margin-right: 2px;
+        }
+    }
+    &-float-right {
+        float: right;
+    }
+    &-line {
+        display: flex;
+        align-items: center;
+    }
+    &-padding {
+        padding-left: 5px;
+    }
+    &-orange {
+        color: $global-orange;
+    }
+}

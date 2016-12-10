@@ -1,0 +1,28 @@
+@import "../../../site/lbd/global/variables";
+
+.lbd{
+    &-loading-wrapper{
+        text-align: center;
+        padding: 15px 0;
+        color: $font-gray-light;
+        font-size: 14px;
+    }
+    &-loading{
+        display: inline-block;
+        &-sm{
+            width: 8px;
+            height: 8px;
+        }
+        &-md{
+            width: 16px;
+            height: 16px;
+        }
+        &-lg{
+            width: 32px;
+            height: 32px;
+        }
+        &.hide{
+            display: none;
+        }
+    }
+}

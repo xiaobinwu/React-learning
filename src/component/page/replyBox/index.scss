@@ -1,0 +1,58 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.lbd-reply-box {
+    &-wrap {
+        position: fixed;
+        overflow: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1001;
+        outline: 0;
+        background: $bg-gray;
+        overflow-y: scroll; /* has to be scroll, not auto */
+        -webkit-overflow-scrolling: touch;
+    }
+    &-content {
+        padding-top: 44px;
+    }
+    &-features {
+        background: #fff;
+        padding: 10px 15px 10px 10px;
+    }
+    &-button {
+        display: inline-block;
+        padding: 5px;
+        color: $font-gray-light;
+        &:active {
+            color: $global-green;
+            .lbd-icon-close {
+                background-image: url("../../../site/lbd/static/job/icon-close-active.png")
+            }
+            .lbd-icon-open {
+                background-image: url("../../../site/lbd/static/job/icon-open-active.png")
+            }
+            .lbd-icon-at {
+                background-image: url("../../../site/lbd/static/job/icon-at-active.png")
+            }
+        }
+        &:last-child {
+            margin-left: 5px;
+        }
+    }
+    &-button-text {
+        padding-left: 5px;
+        font-size: 14px;
+        vertical-align: middle;
+    }
+    &-editable {
+        -webkit-user-select: auto;
+        padding: 0 15px 20px;
+        min-height: 100px;
+        background-color: #fff;
+        font-size: 14px;
+        color: $font-gray-dark;
+    }
+}

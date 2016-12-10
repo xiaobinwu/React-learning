@@ -1,0 +1,26 @@
+@import "../../../site/lbd/global/variables";
+
+.lbd-avatar {
+    display: inline-block;
+    overflow: hidden;
+    background-color: $bg-gray;
+    vertical-align: middle;
+    &-round {
+        border-radius: 50%;
+    }
+    &-md {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+    &-lg {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+    &-link {
+        display: inline-block;
+    }
+    &-image {
+        width: 100%;
+        height: 100%;
+    }
+}

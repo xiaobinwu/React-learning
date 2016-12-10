@@ -1,0 +1,76 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.modal {
+    &-mask {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #373737;
+        background-color: rgba(55,55,55,.6);
+        height: 100%;
+        z-index: 2000;
+    }
+    &-wrap {
+        position: fixed;
+        overflow: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2001;
+        outline: 0;
+        -webkit-overflow-scrolling: touch;
+    }
+    &-content {
+        background-color: #fff;
+        margin: 0 auto;
+        margin-top: 2.8rem;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    &-confirm, &-alert {
+        width: 6.52rem;
+        .modal-body {
+            padding: 0.5rem 0.5rem 0.4rem 0.5rem;
+        }
+    }
+    &-head {
+        color: $font-gray-dark;
+        padding-bottom: 0.3rem;
+        font-size: 16px;
+        word-break: break-all;
+        text-align: center;
+    }
+    &-body {
+        color: $font-gray-normal;
+        line-height: 15px;
+    }
+    &-footer {
+        height: 1.1rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        @include drawBorder('before', 'top', $border-light)
+        &-button {
+            flex: 1;
+            position: relative;
+            color: $global-green;
+            font-size: 18px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include drawVerticalBorder('after', 'right', $border-light)
+            &:last-child:after {
+                content: none
+            }
+            &:active {
+                background: $global-white-touch;
+            }
+        }
+    }
+}

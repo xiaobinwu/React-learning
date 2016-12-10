@@ -1,0 +1,222 @@
+@import '../../../global/base';
+
+.index-landing-employer {
+    header.page-header {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('//hstatic.hirede.com/lbd/images/baidu/background-hr.jpg');
+        .header-logo {
+            position: absolute;
+            top: 0.35rem;
+            left: 0.2rem;
+            width: 88px;
+        }
+        nav.header-nav {
+            position: absolute;
+            top: 0.6rem;
+            right: 0.6rem;
+            font-size: 14px;
+            a {
+                color: rgba(255,255,255,0.4);
+                padding: 5px 10px;
+                margin: 0 2px;
+                &.active {
+                    color: $global-green;
+                    border-bottom: 2px solid $global-green;
+                }
+            }
+        }
+        .header-login {
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 3rem;
+            color: #fff;
+            .button {
+                appearance: none;
+                width: 3.6rem;
+                height: 0.88rem;
+                border: 1px solid rgba(255,255,255,0.4);
+                border-radius: 0.44rem;
+                font-size: 16px;
+                margin-bottom: 0.25rem;
+                color: #fff;
+                &:active {
+                    color: $global-white-touch;
+                }
+            }
+            .login {
+                color: $global-green;
+                margin-left: 3px;
+            }
+        }
+        .header-tip {
+            position: absolute;
+            bottom: 2rem;
+            width: 24px;
+            left: 50%;
+            margin-left: -12px;
+            animation: vertical 1.9s linear infinite;
+        }
+    }
+    section.function-section {
+        background-color: #f4f4f4;
+        ul.function-list {
+            padding: 1.5rem 0.65rem;
+            li {
+                margin-bottom: 2rem;
+                display: flex;
+                align-items: center;
+                .function-logo {
+                    width: 2.3rem;
+                }
+                .function-desc {
+                    h1 {
+                        margin: 0 0 0.16rem 0;
+                        padding-left: 1.1rem;
+                        background-position: 0 100%;
+                        background-size: 1rem 0.6rem;
+                        background-repeat: no-repeat;
+                        font-size: 18px;
+                        padding-top: 0.36rem;
+                    }
+                    p {
+                        font-size: 14px;
+                        margin: 0;
+                    }
+                }
+            }
+            li.item-01 {
+                flex-direction: row;
+                .function-desc h1 {
+                    background-image: url('../../../static/landing/num-01.png')
+                }
+                .function-logo {
+                    margin-right: 0.5rem;
+                }
+            }
+            li.item-02 {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                .function-desc h1 {
+                    background-image: url('../../../static/landing/num-02.png')
+                }
+            }
+            li.item-03 {
+                flex-direction: row;
+                .function-desc h1 {
+                    background-image: url('../../../static/landing/num-03.png')
+                }
+                .function-logo {
+                    margin-right: 0.5rem;
+                }
+            }
+            li.item-04 {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                margin-bottom: 0;
+                .function-desc h1 {
+                    background-image: url('../../../static/landing/num-04.png')
+                }
+            }
+        }
+    }
+    section.partner-section {
+        background-color: #fff;
+        padding: 1rem 0;
+        text-align: center;
+        header {
+            font-size: 15px;
+            position: relative;
+            padding-bottom: 0.14rem;
+            &:after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                transform: translateX(-0.5rem);
+                bottom: 0;
+                height: 1px;
+                width: 1rem;
+                border-bottom: 2px solid #38bc9b;
+            }
+        }
+        .partners {
+            margin: 0.7rem;
+            ul.partner-list {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin-bottom: 0.45rem;
+                li:nth-child(1) {
+                    width: 2.24rem;
+                }
+                li:nth-child(2) {
+                    width: 0.97rem;
+                }
+                li:nth-child(3) {
+                    width: 1.53rem;
+                }
+            }
+        }
+        .register-btn {
+            appearance: none;
+            border: none;
+            background-color: $global-green;
+            width: 2.8rem;
+            height: 0.8rem;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 14px;
+            &:active {
+                background-color: $global-green-touch;
+            }
+        }
+    }
+    footer.page-footer {
+        background: #313131;
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+        padding: 0.72rem;
+        a {
+            color: $global-green;
+            margin-right: 8px;
+        }
+    }
+}
+
+@keyframes vertical {
+    0% {
+       transform: translateY(0) scaleX(1);
+        opacity: 0
+    }
+
+    20% {
+       transform: translateY(20px) scaleX(1.2);
+        opacity: 0
+    }
+
+    40% {
+       transform: translateY(10px) scaleX(1.15);
+        opacity: 1
+    }
+
+    60% {
+       transform: translateY(5px) scaleX(1.1);
+        opacity: 1
+    }
+
+    80% {
+       transform: translateY(2px) scaleX(1.1);
+        opacity: 1
+    }
+
+    100% {
+       transform: translateY(0) scaleX(1);
+        opacity: 0
+    }
+}

@@ -1,0 +1,22 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.lbd-list {
+    .lbd-list-item {
+        background-color: #fff;
+    }
+
+    &-card {
+        padding-top: 10px;
+        .lbd-list-item {
+            margin-bottom: 10px;
+            position: relative;
+            @include drawBorder('before', 'top', $border-dark);
+            @include drawBorder('after', 'bottom', $border-dark);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.toast {
+    &-mask {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: transparent;
+        height: 100%;
+        z-index: 2000;
+    }
+    &-wrap {
+        position: fixed;
+        overflow: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2001;
+        outline: 0;
+        text-align: center;
+    }
+    &-content {
+        background-color: rgba(0,0,0,0.5);
+        color: #fff;
+        font-size: 14px;
+        margin-top: 2.8rem;
+        border-radius: 5px;
+        display: inline-block;
+        padding: 0.4rem 0.6rem;
+        max-width: 60%;
+        line-height: 20px;
+    }
+    &-success, &-loading {
+        min-width: 2.4rem;
+        min-height: 2.4rem;
+        .toast-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .toast-message {
+            margin-top: 0.2rem;
+        }
+    }
+}

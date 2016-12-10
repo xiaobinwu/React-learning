@@ -1,0 +1,19 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.tabs-wrapper{
+	height: 36px;
+    position: relative;
+    width: 100%;
+	@include drawBorder('after', 'bottom', $border-dark);
+}
+.tab-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+
+

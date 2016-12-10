@@ -1,0 +1,12 @@
+@import '../../../global/base';
+
+.content {
+    background-color: $bg-gray;
+    padding-bottom: 64px;
+}
+
+.divider {
+    padding: 10px 0.26rem;
+    font-size: 14px;
+    color: $font-gray-normal;
+}

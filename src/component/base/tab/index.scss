@@ -1,0 +1,18 @@
+@import "../../../site/lbd/global/variables";
+
+.tab-item{
+    color: $font-gray-normal;
+    font-size: 14px;
+    flex: 1;
+    text-align: center;
+    margin: 0 18px;
+    height: 36px;
+    line-height: 36px;
+    &.active {
+        color: $global-green;
+        font-size: 16px;
+        border-bottom: 3px solid $global-green;
+    }
+}
+
+

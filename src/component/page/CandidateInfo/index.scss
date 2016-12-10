@@ -1,0 +1,80 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.lbd-candidate-info {
+    padding: 0.35rem 0.26rem 0 0.26rem;
+    background: #fff;
+    &-header {
+        margin-bottom: 0.22rem;
+    }
+    &-name {
+        font-size: 16px;
+        font-weight: 500;
+        color: $font-gray-dark;
+        margin-right: 0.2rem;
+    }
+    &-status {
+        color: $font-gray-normal;
+        vertical-align: middle;
+    }
+    &-info {
+        font-size: 14px;
+        color: $font-gray-normal;
+        padding-bottom: 0.15rem;
+    }
+    &-item {
+        color: $font-gray-normal;
+        font-size: 12px;
+        display: inline-block;
+        margin-right: 0.32rem;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &-footer {
+        position: relative;
+        padding-top: 11px;
+        padding-bottom: 15px;
+        font-size: 14px;
+        color: $font-gray-dark;
+        @include drawBorder('before', 'top', $border-light)
+    }
+    &-between {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-align-right {
+        text-align: right;
+        white-space: nowrap;
+        color: $font-gray-light;
+        font-size: 12px;
+    }
+    &-line {
+        display: flex;
+        align-items: center;
+    }
+    &-padding {
+        padding-left: 10px;
+        vertical-align: middle;
+    }
+    &-padding-sm {
+        padding-left: 5px;
+        vertical-align: middle;
+        color: $font-gray-normal;
+    }
+    &-column {
+        padding: 10px 0.26rem;
+        background: #fff;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    &-recommend {
+        width: 85%;
+        display: inline-block;
+        line-height: 20px;
+    }
+    &-left {
+        width: 80%;
+    }
+}

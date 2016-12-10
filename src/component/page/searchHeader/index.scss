@@ -1,0 +1,59 @@
+@import "../../../site/lbd/global/variables";
+
+.lbd-search-header {
+    position: fixed;
+    transform: translateZ(0);
+    z-index: 1099;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    background-color: $global-green;
+    display: flex;
+    align-items: center;
+    &-left {
+        display: inline-block;
+        font-size: 14px;
+        height: 100%;
+        line-height: 44px;
+        padding: 0 0.26rem;
+    }
+    &-bar {
+        flex: 1;
+        margin: 0 0.25rem;
+        height: 28px;
+        line-height: 28px;
+        border-radius: 14px;
+        background-color: $global-green-touch;
+        display: flex;
+        align-items: center;
+        input[type='search'] {
+            appearance: textfield;
+            background: transparent;
+            border: none;
+            color: #fff;
+            padding-left: 0.2rem;
+            box-sizing: border-box;
+            flex: 1;
+            font-size: 14px;
+        }
+        .search-icon {
+            padding: 0 10px;
+        }
+    }
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: rgba(255, 255, 255, 0.57);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: rgba(255, 255, 255, 0.57);
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: rgba(255, 255, 255, 0.57);
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: rgba(255, 255, 255, 0.57);
+}

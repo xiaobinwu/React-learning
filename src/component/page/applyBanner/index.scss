@@ -1,0 +1,37 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.lbd-apply-banner {
+    background: #fff;
+    padding: 0.26rem;
+    margin-top: 10px;
+    position: relative;
+    @include drawBorder('before', 'top', $border-dark)
+    @include drawBorder('after', 'bottom', $border-dark)
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-link {
+        width: 100%;
+    }
+    &-content {
+        font-size: 16px;
+        color: $font-gray-dark;
+        flex: 1;
+        padding: 0 0.26rem;
+    }
+    &-text {
+        font-size: 14px;
+    }
+    &-avatar {
+        box-sizing: content-box;
+        border: 2px solid #fff;
+        margin-left: -8px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    &-arrow {
+        transform: rotate(-90deg)
+    }
+}

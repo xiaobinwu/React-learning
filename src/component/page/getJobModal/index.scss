@@ -1,0 +1,19 @@
+@import "../../../site/lbd/global/variables";
+
+.lbd-job-modal {
+    &-title {
+        color: $font-gray-dark;
+        padding-bottom: 0.3rem;
+        font-size: 16px;
+        word-break: break-all;
+        text-align: center;
+    }
+    &-content {
+        line-height: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    &-orange {
+        color: $global-orange;
+    }
+}

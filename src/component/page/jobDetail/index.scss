@@ -1,0 +1,38 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.lbd-job-detail {
+    overflow: hidden;
+    padding-bottom: 52px;
+    &-card {
+        background: #fff;
+        margin-bottom: 10px;
+        position: relative;
+        @include drawBorder('after', 'bottom', $border-dark);
+        @include drawBorder('before', 'top', $border-dark);
+        &:first-child:before {
+            content: none
+        }
+    }
+    &-content {
+        padding: 0.35rem 0.26rem 0.25rem 0.26rem;
+    }
+    &-title {
+        font-size: 14px;
+        color: $font-gray-dark;
+        padding-bottom: 10px;
+    }
+    &-para {
+        font-size: 13px;
+        line-height: 22px;
+        word-break: break-word;
+        white-space: pre-wrap;
+        color: $font-gray-normal;
+    }
+    &-footer {
+        padding: 0 0.26rem;
+        a {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@import 'vendor/normalize';
+@import "mixins";
+@import "variables";
+
+@include queryWidth(-1, 319);
+@include queryWidth(320, 359);
+@include queryWidth(360, 374);
+@include queryWidth(375, 383);
+@include queryWidth(384, 399);
+@include queryWidth(414, -1);
+
+// Set box-sizing globally to handle padding and border widths
+html {
+  box-sizing: border-box;
+  background: $bg-gray;
+}
+
+body{
+  font-size: 12px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+    font-size: 12px;
+}
+
+label {
+  -webkit-appearance: none;
+}
+
+img {
+  // Grid Defaults to get images and embeds to work properly
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+
+  // Get rid of gap under images by making them display: inline-block; by default
+  display: inline-block;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.modal-is-open {
+    //Block scrolling events behind the image-container
+    overflow: hidden;
+    position:fixed;
+}
+
+.truncate {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.is-orange {
+    color: $global-orange;
+}
+
+.is-green {
+    color: $global-green;
+}

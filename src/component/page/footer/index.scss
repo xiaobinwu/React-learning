@@ -1,0 +1,16 @@
+@import "../../../site/lbd/global/variables";
+@import "../../../site/lbd/global/mixins";
+
+.lbd-footer {
+    position: fixed;
+    z-index: 99;
+    transform: translateZ(0);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    @include drawBorder('before', 'top', $border-dark)
+}
