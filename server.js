@@ -16,3 +16,6 @@ new WebpackDevServer(webpack(config), config.devServer)
   open('http://localhost:' + config.port + '/webpack-dev-server/');
 });
  
+
+
+ 
