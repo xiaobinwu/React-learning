@@ -367,3 +367,6 @@ npm run copy
     );
     ```
     5. 不要把display logic写在`componentWillReceiveProps`或`componentWillMount`中，把它们都移到render()中去。
+
+
+    http://localhost:8000/site/lbd/view/comment/commentBox/index.html
