@@ -50,5 +50,6 @@ class AppComponent extends React.Component {
 
 ReactDom.render(
 	<AppComponent />,
-	document.getElementById('app')
+	document.getElementById('app'),
+	() => { console.log('comment success') }
 );
