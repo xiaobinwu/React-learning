@@ -33,6 +33,9 @@ class AppComponent extends React.Component {
 	componentDidMount(){
 		//组件渲染
 		this.getData();
+		//ReactDom.findDOMNode获取渲染后的dom节点
+		const Dom = ReactDom.findDOMNode(this);
+		console.log('this classname is :' + Dom.className);
 	}
 
 
