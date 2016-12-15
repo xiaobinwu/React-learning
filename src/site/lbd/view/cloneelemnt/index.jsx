@@ -12,6 +12,9 @@ class Ul extends React.Component {
 	deal(child, index){
 		return React.cloneElement(child, {i:index, key:index})
 	}
+	componentWillUnmount(){
+		console.log('即将卸载组件，清除state、监听事件');
+	}
 	render(){
 		return (
 			<ul>
@@ -21,7 +24,8 @@ class Ul extends React.Component {
 	}
 }
 
-ReactDom.render(
+//返回引用，供外部引用
+const instance = ReactDom.render(
 	<Ul>
 		<Li i="1"/>
 		<Li i="2"/>
@@ -30,3 +34,19 @@ ReactDom.render(
 	document.getElementById('app'),
 	() => { console.log('cloneElement success') }
 );
+
+setTimeout(function(){
+	console.log(instance.props.children)
+}, 2000);
+
+//unmountComponentAtNode
+setTimeout(function(){
+    const isUnmount = ReactDom.unmountComponentAtNode(document.getElementById('app'));
+    console.log(isUnmount);  //打印出true
+}, 4000)
+
+//React.DOM.tag
+// const div = React.DOM.div({name : 'div1'}, 'HELLO ', React.DOM.span(null, <em>WORLD</em>));
+// ReactDom.render(
+//     div, document.body
+// )
