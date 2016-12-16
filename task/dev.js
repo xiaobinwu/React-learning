@@ -33,7 +33,8 @@ let config = Object.assign({}, baseConfig, {
     // landingHeadhunting: buildEntryPoint('./src/site/lbd/view/landing/headhunting/index'),
     // recommendation: buildEntryPoint('./src/site/lbd/view/sharing/recommendation/index'),
     comment: buildEntryPoint('./src/site/lbd/view/comment/commentbox/index'),
-    clone: buildEntryPoint('./src/site/lbd/view/cloneelemnt/index')
+    clone: buildEntryPoint('./src/site/lbd/view/cloneelemnt/index'),
+    form: buildEntryPoint('./src/site/lbd/view/form/index')
   },
   cache: true,
   devtool: 'eval-source-map',
