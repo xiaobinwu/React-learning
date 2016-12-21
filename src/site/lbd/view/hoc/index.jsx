@@ -55,19 +55,16 @@ const HandledComponent2 =  MyContainer2(AppComponent2)
 
 
 
-//高阶组件-demo3（控制props）
+//高阶组件-demo3（refs使用）
 const MyContainer3 = (WrappedComponent) => class extends React.Component{
-		componentDidMount(){
-			
-		}
-		proc(WrappedComponentInstance){
-			console.log(WrappedComponentInstance)
-			WrappedComponentInstance.method();
+		proc(wrappedComponentInstance){
+			wrappedComponentInstance.consoleData()
 		}
 		render(){
 			const props = Object.assign({}, this.props, { ref: this.proc.bind(this) })
 			return(
 				<WrappedComponent {...props} />
+				// 或 <WrappedComponent {...this.props} ref={this.proc.bind(this)} />
 			) 
 		}
 	}
@@ -78,12 +75,15 @@ const AppComponent3 = class extends React.Component {
 	render(){
 		return (
 			<div>
-				高阶组件-demo3（控制props）
+				高阶组件-demo3（refs使用）
 			</div>
 		);
 	}
 }
-const HandledComponent3 =  MyContainer2(AppComponent3)
+const HandledComponent3 =  MyContainer3(AppComponent3)
+
+
+
 
 
 ReactDom.render(
