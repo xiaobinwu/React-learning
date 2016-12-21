@@ -55,8 +55,38 @@ const HandledComponent2 =  MyContainer2(AppComponent2)
 
 
 
+//高阶组件-demo3（控制props）
+const MyContainer3 = (WrappedComponent) => class extends React.Component{
+		componentDidMount(){
+			
+		}
+		proc(WrappedComponentInstance){
+			console.log(WrappedComponentInstance)
+			WrappedComponentInstance.method();
+		}
+		render(){
+			const props = Object.assign({}, this.props, { ref: this.proc.bind(this) })
+			return(
+				<WrappedComponent {...props} />
+			) 
+		}
+	}
+const AppComponent3 = class extends React.Component {
+	consoleData(){
+		console.log('我可以供高阶组件ref调用，也可以在这里去改变本身组件的prop和state');
+	}
+	render(){
+		return (
+			<div>
+				高阶组件-demo3（控制props）
+			</div>
+		);
+	}
+}
+const HandledComponent3 =  MyContainer2(AppComponent3)
+
 
 ReactDom.render(
-	<HandledComponent2 text="我是来自身组件的props Text" color="green"/>,
+	<HandledComponent3/>,
 	document.getElementById('app')
 );
