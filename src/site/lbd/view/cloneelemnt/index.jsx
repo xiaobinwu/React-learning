@@ -2,6 +2,7 @@ import './index.scss';
 import React from 'react';
 import ReactDom from 'react-dom';
 
+
 let Li = (props) =>{
 	return(
 		<li>{props.i}</li>
@@ -16,8 +17,10 @@ class Ul extends React.Component {
 		console.log('即将卸载组件，清除state、监听事件');
 	}
 	render(){
+		const nums = React.Children.count(this.props.children);
 		return (
 			<ul>
+				<li>一共有{nums}个li</li>
 				{this.props.children.map(this.deal.bind(this))}
 			</ul>
 		);
