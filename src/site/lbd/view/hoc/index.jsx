@@ -1,7 +1,7 @@
 import './index.scss';
 import React from 'react';
 import ReactDom from 'react-dom';
-
+/**********属性代理***********/
 //高阶组件－demo1（使用其他元素包裹）
 const MyContainer1 = (WrappedComponent) => class extends React.Component{
 		render(){
@@ -82,11 +82,47 @@ const AppComponent3 = class extends React.Component {
 }
 const HandledComponent3 =  MyContainer3(AppComponent3)
 
+/**********反向继承***********/
+//高阶组件－demo1（基本使用）
+const MyContainer4 = (WrappedComponent) => class A extends WrappedComponent{
+	render(){
+		return super.render()
+	}
+}
+const AppComponent4 = class extends React.Component {
+	render(){
+		return (
+			<div>
+				高阶组件(反向继承)-super.render()
+			</div>
+		);
+	}
+}
+const HandledComponent4 =  MyContainer4(AppComponent4)
 
+//高阶组件－demo2（渲染劫持－条件渲染)-反向继承的高阶组件不能保证一定渲染整个子元素树
+const MyContainer5 = (WrappedComponent) => class B extends WrappedComponent{
+	render(){
+		if(!this.props.isLogin){
+			return (<div>nothing</div>)
+		}
+		return super.render()
+	}
+}
+const AppComponent5 = class extends React.Component {
+	render(){
+		return (
+			<div>
+				就像之前所说的，反向继承的高阶组件不能保证一定渲染整个子元素树，这同时也给渲染劫持增添了一些限制。通过反向继承，你只能劫持 WrappedComponent 渲染的元素，这意味着如果 WrappedComponent 的子元素里有 Function 类型的 React Element，你不能劫持这个元素里面的子元素树的渲染。
+			</div>
+		);
+	}
+}
+const HandledComponent5 =  MyContainer5(AppComponent5)
 
 
 
 ReactDom.render(
-	<HandledComponent3/>,
+	<HandledComponent5 isLogin={false}/>,
 	document.getElementById('app')
 );
