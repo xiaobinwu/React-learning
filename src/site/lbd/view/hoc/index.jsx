@@ -2,6 +2,7 @@ import './index.scss';
 import React from 'react';
 import ReactDom from 'react-dom';
 /**********属性代理***********/
+//WrappedComponent.prototype.render获取实例，不提倡
 //高阶组件－demo1（使用其他元素包裹）
 const MyContainer1 = (WrappedComponent) => class extends React.Component{
 		render(){
@@ -120,7 +121,7 @@ const AppComponent5 = class extends React.Component {
 }
 const HandledComponent5 =  MyContainer5(AppComponent5)
 
-//通过 render 来变成 React Elements tree 的结果
+//高阶组件－demo3 通过 render 来变成 React Elements tree 的结果
 const MyContainer6 = (WrappedComponent) => class C extends WrappedComponent{
 	render(){
 		//获取原React Elements tree
@@ -150,7 +151,42 @@ const AppComponent6 = class extends React.Component {
 }
 const HandledComponent6 =  MyContainer6(AppComponent6)
 
+
+//高阶组件－demo4 传递额外参数
+const MyContainer7 = (...params) => {
+	return function(WrappedComponent){
+		return 	class D extends WrappedComponent{
+				render(){
+					const { text, age } = params;
+					return(
+						<div style={{height: 200, backgroundColor: 'green', color: '#fff'}}>
+							<div>{text}</div>
+							<div>{age}</div>
+							{super.render()}
+						</div>
+					)
+				}
+			}		
+	}
+
+}
+const AppComponent7 = class extends React.Component {
+	constructor(props) {
+	  super(props);
+	  this.state = {
+	  	value: '我是AppComponent7的value'
+	  };
+	}
+	render(){
+		return (
+			<input type="text" style={{width: 200}} value={this.state.value}/>
+		);
+	}
+}
+const HandledComponent7 =  MyContainer7({ text: '我是小斌', age: '24'})(AppComponent7)
+
+
 ReactDom.render(
-	<HandledComponent6/>,
+	<HandledComponent7/>,
 	document.getElementById('app')
 );
