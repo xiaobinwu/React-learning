@@ -120,9 +120,37 @@ const AppComponent5 = class extends React.Component {
 }
 const HandledComponent5 =  MyContainer5(AppComponent5)
 
-
+//通过 render 来变成 React Elements tree 的结果
+const MyContainer6 = (WrappedComponent) => class C extends WrappedComponent{
+	render(){
+		//获取原React Elements tree
+		const origintree = super.render()
+		console.log(origintree)
+		let newProp = {};
+		if(origintree && origintree.type === 'input'){
+			newProp = { value: "我改变了你的值" }
+		}
+		const props = Object.assign({}, origintree.props, newProp)
+		const neworigintree = React.cloneElement(origintree, props, origintree.props.children)
+		return neworigintree
+	}
+}
+const AppComponent6 = class extends React.Component {
+	constructor(props) {
+	  super(props);
+	  this.state = {
+	  	value: '我是AppComponent6的value'
+	  };
+	}
+	render(){
+		return (
+			<input type="text" style={{width: 200}} value={this.state.value}/>
+		);
+	}
+}
+const HandledComponent6 =  MyContainer6(AppComponent6)
 
 ReactDom.render(
-	<HandledComponent5 isLogin={false}/>,
+	<HandledComponent6/>,
 	document.getElementById('app')
 );
