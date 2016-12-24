@@ -186,7 +186,43 @@ const AppComponent7 = class extends React.Component {
 const HandledComponent7 =  MyContainer7({ text: '我是小斌', age: '24'})(AppComponent7)
 
 
+//高阶组件－demo5 控制state
+const MyContainer8 = (WrappedComponent) => class  extends WrappedComponent{
+	//由于使用高阶组件会使WrappedComponent name 丢失
+	//static displayName = WrappedComponent.displayName || WrappedComponent.name || 'component';
+	render(){
+		console.log(this)
+		return(
+			<div>
+				<div>
+					<span>这是WrappedComponent组件的state</span>
+					<span>{JSON.stringify(this.state)}</span>
+				</div>
+				<div>
+					<span>这是WrappedComponent组件的props</span>
+					<span>{JSON.stringify(this.props)}</span>
+				</div>	
+				{super.render()}
+			</div>
+		)
+	}
+}
+const AppComponent8 = class extends React.Component {
+	constructor(props) {
+	  super(props);
+	  this.state = {
+	  	value: '我是AppComponent8的value'
+	  };
+	}
+	render(){
+		return (
+			<input type="text" style={{width: 200}} value={this.state.value}/>
+		);
+	}
+}
+const HandledComponent8 =  MyContainer8(AppComponent8)
+
 ReactDom.render(
-	<HandledComponent7/>,
+	<HandledComponent8/>,
 	document.getElementById('app')
 );
