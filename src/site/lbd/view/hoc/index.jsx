@@ -153,7 +153,7 @@ const HandledComponent6 =  MyContainer6(AppComponent6)
 
 
 //高阶组件－demo4 传递额外参数
-const MyContainer7 = (...params) => {
+const MyContainer7 = (params) => {
 	return function(WrappedComponent){
 		return 	class D extends WrappedComponent{
 				render(){
