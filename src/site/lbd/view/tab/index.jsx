@@ -1,8 +1,8 @@
 import './index.scss';
 import React from 'react';
 import ReactDom from 'react-dom';
-import Tabs from '../Tabs/index';
-import TabPane from '../Tabs/TabPane/index';
+import Tabs from '../components/Tabs/index';
+import TabPane from '../components/Tabs/TabPane/index';
 
 class AppComponent extends React.Component {
 	constructor(props){
