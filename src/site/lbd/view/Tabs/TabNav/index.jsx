@@ -1,14 +1,8 @@
 import './index.scss';
 import React, { Component, PropTypes, cloneElement } from 'react';
-import classnames form 'classnames';
+import classnames from 'classnames';
 
 class TabNav extends Component {
-	static propTypes = {
-		//class前缀
-		classPrefix: PropTypes.string,
-		panels: PropTypes.node,
-		activeIndex: PropTypes.number
-	}
 	getTabs(){
 		const { panels, classPrefix, activeIndex } = this.props;
 		return React.Children.map(panels, (child) => {
@@ -17,13 +11,13 @@ class TabNav extends Component {
 			//利用class控制显示隐藏
 			let classes = classnames({
 				[`${classPrefix}-tab`]: true,
-				[`${classPrefix}-active`]: activeIndex === order,
+				[`${classPrefix}-nav-active`]: activeIndex === order,
 				[`${classPrefix}-disabled`]: child.props.disabled,
 			});
 			let events = {};
 			if(!child.props.disabled){
 				events = {
-					onClick: this.props.onTabClick.bind(this, order);
+					onClick: this.props.onTabClick.bind(this, order)
 				}
 			}
 			const ref = {};
@@ -61,6 +55,13 @@ class TabNav extends Component {
 			</div>
 		);
 	}
+}
+
+TabNav.propTypes = {
+	//class前缀
+	classPrefix: PropTypes.string,
+	panels: PropTypes.node,
+	activeIndex: PropTypes.number
 }
 
 export default TabNav;

@@ -1,15 +1,8 @@
 import './index.scss';
 import React, { Component, PropTypes, cloneElement } from 'react';
-import classnames form 'classnames';
+import classnames from 'classnames';
 
 class TabContent extends Component {
-	static propTypes = {
-		//class前缀
-		classPrefix: PropTypes.string,
-		panels: PropTypes.node,
-		activeIndex: PropTypes.number,
-		isActive: PropTypes.bool
-	}
 	getTabPanes(){
 		const { panels, classPrefix, activeIndex, isActive } = this.props;
 		return React.Children.map(panels, (child) => {
@@ -35,6 +28,14 @@ class TabContent extends Component {
 			</div>
 		);
 	}
+}
+
+TabContent.propTypes = {
+	//class前缀
+	classPrefix: PropTypes.string,
+	panels: PropTypes.node,
+	activeIndex: PropTypes.number,
+	isActive: PropTypes.bool
 }
 
 export default TabContent;

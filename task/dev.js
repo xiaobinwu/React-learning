@@ -35,7 +35,8 @@ let config = Object.assign({}, baseConfig, {
     comment: buildEntryPoint('./src/site/lbd/view/comment/commentbox/index'),
     clone: buildEntryPoint('./src/site/lbd/view/cloneelemnt/index'),
     form: buildEntryPoint('./src/site/lbd/view/form/index'),
-    hoc: buildEntryPoint('./src/site/lbd/view/hoc/index')
+    hoc: buildEntryPoint('./src/site/lbd/view/hoc/index'),
+    tab: buildEntryPoint('./src/site/lbd/view/tab/index')
   },
   cache: true,
   devtool: 'eval-source-map',

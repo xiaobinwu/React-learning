@@ -1,34 +1,10 @@
 import './index.scss';
 import React, { Component, PropTypes, cloneElement } from 'react';
-import classnames form 'classnames';
+import classnames from 'classnames';
 import TabNav from './TabNav';
 import TabContent from './TabContent';
-// <Tabs classPrefix={'tabs'} defaultActiveIndex={0}>
-// 	<TabPane key={0} tab={'Tab 1'}>第一个tab里面的内容</TabPane>
-// 	<TabPane key={1} tab={'Tab 2'}>第二个tab里面的内容</TabPane>
-// 	<TabPane key={2} tab={'Tab 3'}>第三个tab里面的内容</TabPane>
-// </Tabs>
 
 class Tabs extends Component {
-	static propTypes = {
-		//在主节点上添加可选class
-		className: PropTypes.string,
-		//class前缀
-		classPrefix: PropTypes.string,
-		children: PropTypes.oneOfType([
-			PropTypes.arrayOf(PropTypes.node),
-			PropTypes.node
-		]),
-		//默认激活索引，组件内更新
-		defaultActiveIndex: PropTypes.number,
-		//默认激活索引，组件外更新
-		activeIndex: PropTypes.number,
-		onChange: PropTypes.func
-	}
-	static defaultProps = {
-	  classPrefix: 'tabs',
-	  onChange: () => {}
-	}
 	constructor(props){ 
 		super(props);
 		// 对事件方法的绑定
@@ -104,5 +80,27 @@ class Tabs extends Component {
 		);
 	}
 }
+
+Tabs.propTypes = {
+	//在主节点上添加可选class
+	className: PropTypes.string,
+	//class前缀
+	classPrefix: PropTypes.string,
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node
+	]),
+	//默认激活索引，组件内更新
+	defaultActiveIndex: PropTypes.number,
+	//默认激活索引，组件外更新
+	activeIndex: PropTypes.number,
+	onChange: PropTypes.func
+}
+
+Tabs.defaultProps = {
+	classPrefix: 'tabs',
+	onChange: () => {}
+}
+
 
 export default Tabs;
