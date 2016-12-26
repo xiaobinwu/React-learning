@@ -49,10 +49,10 @@ class TabNav extends Component {
 		const {classPrefix} = this.props;
 		const rootClasses = classnames({
 			[`${classPrefix}-bar`]: true
-		})
+		});
 		const classes = classnames({
 			[`${classPrefix}-nav`]: true
-		})		
+		});		
 		return (
 			<div className={rootClasses} role="tablist">
 				<ul className={classes}>
