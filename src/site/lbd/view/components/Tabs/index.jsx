@@ -3,6 +3,7 @@ import React, { Component, PropTypes, cloneElement } from 'react';
 import classnames from 'classnames';
 import TabNav from './TabNav';
 import TabContent from './TabContent';
+import { is } from 'immutable';
 
 class Tabs extends Component {
 	constructor(props){ 
@@ -21,6 +22,26 @@ class Tabs extends Component {
 			activeIndex,
 			prevIndex: activeIndex
 		}
+	}
+	//immutable.is进行比较，避免深拷贝与深比较
+	shouldComponentUpdate(nextProps, nextState){
+		const thisProps = this.props || {};
+		const thisState = this.state || {};
+		if(Object.keys(thisProps).length !== Object.keys(nextProps).length || Object.keys(thisState).length !== Object.keys(nextState).length){
+			return true;
+		}
+		for(const key in nextProps){
+			if(thisProps[key] !== nextProps[key] || !is(thisProps[key], nextProps[key])){
+				return true;
+			}
+		}
+
+		for(const key in nextState){
+			if(thisState[key] !== nextState[key] || !is(thisState[key], nextState[key])){
+				return true;
+			}
+		}
+		return false; 
 	}
 	componentWillReceiveProps(nextProps){
 		//如果props传入activeIndex,则直接更新
