@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 import BaseComponent from '../../baseComponent';
 
 class CommentForm extends BaseComponent {
@@ -12,11 +12,13 @@ class CommentForm extends BaseComponent {
 		};
 		// ES6 Classes No Autobinding (需手动绑定，三种方法,官方建议用下面的方法)
 		this._bind('handleAuthorChange', 'handleTextChange', 'MergeStateWithProps');
+		// pureRender(有三种情况会使shouldComponentUpdate直接返回true)
+		this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this); 
 	}
+
 
 	handleAuthorChange(e){
 		this.setState({ author: e.target.value });
-
 	}
 
 	handleTextChange(e){
