@@ -36,7 +36,8 @@ let config = Object.assign({}, baseConfig, {
     clone: buildEntryPoint('./src/site/lbd/view/cloneelemnt/index'),
     form: buildEntryPoint('./src/site/lbd/view/form/index'),
     hoc: buildEntryPoint('./src/site/lbd/view/hoc/index'),
-    tab: buildEntryPoint('./src/site/lbd/view/tab/index')
+    tab: buildEntryPoint('./src/site/lbd/view/tab/index'),
+    immutable: buildEntryPoint('./src/site/lbd/view/immutable/index')
   },
   cache: true,
   devtool: 'eval-source-map',

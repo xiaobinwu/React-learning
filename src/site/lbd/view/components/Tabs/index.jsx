@@ -23,7 +23,7 @@ class Tabs extends Component {
 			prevIndex: activeIndex
 		}
 	}
-	//immutable.is进行比较，避免深拷贝与深比较
+	//immutable.is进行比较，避免深拷贝与深比较 [https://facebook.github.io/immutable-js/]
 	shouldComponentUpdate(nextProps, nextState){
 		const thisProps = this.props || {};
 		const thisState = this.state || {};
