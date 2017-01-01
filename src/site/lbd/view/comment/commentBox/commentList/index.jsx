@@ -2,7 +2,7 @@ import './index.scss';
 import React from 'react';
 import Comment from './comment/index';
 import {AnimateGroup} from 'react-smooth';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 const enter = {
 	from: 'scaleY(0)',
 	to: 'scaleY(1)',
