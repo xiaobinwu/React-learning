@@ -1,0 +1,7 @@
+.example-enter{
+	transform: scaleY(0);
+	&.example-enter-active{
+		transform: scaleY(1);
+		transition: transform .4s ease;
+	}
+}

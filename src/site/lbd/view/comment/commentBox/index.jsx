@@ -71,11 +71,11 @@ class AppComponent extends React.Component {
 		let {data} = this.state;
 		return (
 			<div className="commentBox">
-				<Animate to={0} from={1} attributeName="opacity">
+				<Animate to={0} from={1} attributeName="opacity" ease="ease">
 					<div style={{ width: 100, height: 100, backgroundColor: 'red' }}/>
 				</Animate>	
 
-				<Animate steps={steps} onAnimationEnd={this.animationEnd}>
+				<Animate steps={steps} onAnimationEnd={this.animationEnd} ease="spring">
 					<div style={{ width: 100, height: 100, backgroundColor: 'green' }}/>
 				</Animate>	
 

@@ -1,22 +1,13 @@
+import './index.scss';
 import React from 'react';
 import Comment from './comment/index';
 import {AnimateGroup} from 'react-smooth';
-const appear = {
-  steps: [{
-    style: {
-      transform: 'translateX(0)'
-    },
-  }, {
-    duration: 1000,
-    style: {
-      transform: 'translateX(-300)'
-    },
-  }, {
-    duration: 2000,
-    style: {
-      transform: 'translateX(300)'
-    },
-  }]
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+const enter = {
+	from: 'scaleY(0)',
+	to: 'scaleY(1)',
+	attributeName: 'transform',
+	duration: 400
 };
 let CommentList = (props) =>{
 	/*react的key关乎到react的dom-diff算法 react中对于dom的操作是根据生成的data-reactid进行绑定的，
@@ -33,7 +24,10 @@ let CommentList = (props) =>{
 
 	return(
 		<div className="commentList">
-			<AnimateGroup appear={appear}>
+			<ReactCSSTransitionGroup transitionName="example" transitionEnterTimeout={400}>
+				{commentNodes}
+			</ReactCSSTransitionGroup>
+			<AnimateGroup enter={enter}>
 				{commentNodes}
 			</AnimateGroup>
 		</div>
