@@ -7,7 +7,7 @@ let CommentList = (props) =>{
 	let {data} = props;
 	let commentNodes = data.map((comment, index)=>{
 		return(
-			<Comment author={comment.author}  commentid={comment.id}  key={index}>
+			<Comment author={comment.author}  commentid={comment.id}  key={comment.id}>
 				{comment.text}
 			</Comment>
 		);
