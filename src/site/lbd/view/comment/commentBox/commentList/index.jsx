@@ -1,5 +1,14 @@
+import './index.scss';
 import React from 'react';
 import Comment from './comment/index';
+import {AnimateGroup} from 'react-smooth';
+import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
+const enter = {
+	from: 'scaleY(0)',
+	to: 'scaleY(1)',
+	attributeName: 'transform',
+	duration: 400
+};
 let CommentList = (props) =>{
 	/*react的key关乎到react的dom-diff算法 react中对于dom的操作是根据生成的data-reactid进行绑定的，
 	添加key可以保证dom结构的完整性，而不会根据react自己对dom标记的key进行重新分配 react每次决定
@@ -15,7 +24,12 @@ let CommentList = (props) =>{
 
 	return(
 		<div className="commentList">
-			{commentNodes}
+			<ReactCSSTransitionGroup transitionName="example" transitionEnterTimeout={400}>
+				{commentNodes}
+			</ReactCSSTransitionGroup>
+			<AnimateGroup enter={enter}>
+				{commentNodes}
+			</AnimateGroup>
 		</div>
 	)
 }
